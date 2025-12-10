@@ -44,7 +44,7 @@
   "workbench.secondarySideBar.showLabels": false,
   "rust-analyzer.inlayHints.typeHints.enable": false,
   "rust-analyzer.inlayHints.parameterHints.enable": false,
-  "editor.codeActionsOnSave": {  
+  "editor.codeActionsOnSave": {
     "source.organizeImports.ruff": "explicit"
   },
   "terminal.integrated.sendKeybindingsToShell": true,
@@ -93,9 +93,7 @@
     "enable": false
   },
   "workbench.secondarySideBar.defaultVisibility": "hidden",
-  "errorLens.excludeBySource": [
-    "[\"Pylance(reportShadowedImports)\"]"
-  ],
+  "errorLens.excludeBySource": ["[\"Pylance(reportShadowedImports)\"]"],
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -111,4 +109,16 @@
   "editor.unicodeHighlight.allowedLocales": {
     "cs": true
   },
+  "terminal.integrated.allowedLinkSchemes": [
+    "file",
+    "http",
+    "https",
+    "mailto",
+    "vscode",
+    "vscode-insiders",
+    "man"
+  ],
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
