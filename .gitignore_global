@@ -25,6 +25,7 @@ pip-wheel-metadata
 .idea
 coverage.xml
 *.sublime-*
+.pnpm-store
 
 .vscode/
 **.code-workspace
