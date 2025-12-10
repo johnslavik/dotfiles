@@ -61,7 +61,7 @@ _dp = _DisplayHookPatcher(do_pprint)  # 🦈
 _dp.start()
 d = sys.displayhook
 
-if __name__ == "__main__":
+if __name__ == "__main__" and os.getenv("PYTHONRC_MANAGER"):
     _rc = _project_rc_path()
     if _rc and os.path.exists(_rc):
         _init_rc_script(_rc, globals())
