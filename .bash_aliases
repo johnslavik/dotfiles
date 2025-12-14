@@ -13,6 +13,19 @@ alias r='cargo run --quiet --'
 alias autin='atuin'
 alias pre-commit='prek'
 
+function path-add() {
+    if [ -z "$1" ]; then return; fi
+
+    NEWPATH="$1"
+    case ":${PATH}:" in
+        *:"$NEWPATH":*)
+            ;;
+        *)
+            export PATH="$PATH:$NEWPATH"
+            ;;
+    esac
+}
+
 function f() {
     code -r "$1"
 }
@@ -44,7 +57,7 @@ function rm-images() {
 [[ -f .aliases ]] && source .aliases
 
 if [[ -d "$PWD/scripts" ]]; then
-    export PATH="$PATH:$PWD/scripts/"
+    path-add "$PWD/scripts/"
 fi
 
 function pymake() {
