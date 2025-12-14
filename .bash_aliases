@@ -2,7 +2,7 @@ alias c=clear
 alias cp='cp -vi'
 alias mv='mv -vi'
 alias rm='rm -vi'
-alias fd-first='fd --max-results 1'
+alias fdf='fd --max-results 1'
 
 alias pn='pnpm'
 alias px='pnpx'
@@ -18,6 +18,10 @@ function path-add() {
 
     NEWPATH="$1"
     case ":${PATH}:" in
+        "$NEWPATH":*)
+            ;;
+        *:"$NEWPATH")
+            ;;
         *:"$NEWPATH":*)
             ;;
         *)
@@ -26,12 +30,12 @@ function path-add() {
     esac
 }
 
-function f() {
-    code -r "$1"
+function fork-sync() {
+    git pull upstream main && git push origin main
 }
 
-function sync-fork() {
-    git pull upstream main && git push origin main
+function where() {
+    which -a $1 | uniq
 }
 
 if which wine 1> /dev/null 2>&1; then
@@ -41,30 +45,4 @@ if which wine 1> /dev/null 2>&1; then
     }
 fi
 
-function where() {
-    which -a $1 | uniq
-}
-
-function rm-containers() {
-    docker rm -vf $(docker ps -aq)
-}
-
-function rm-images() {
-    docker rmi -f $(docker images -aq)
-}
-
 [[ -f ~/.private_aliases ]] && . ~/.private_aliases
-[[ -f .aliases ]] && source .aliases
-
-if [[ -d "$PWD/scripts" ]]; then
-    path-add "$PWD/scripts/"
-fi
-
-function pymake() {
-    # use only in cpython repo!
-    if [[ "$OSTYPE" == "cygwin" ]]; then
-        PCbuild/build.bat "$@"
-    elif [[ "$OSTYPE" == "cygwin" ]]; then
-        ./make "$@"
-    fi
-}

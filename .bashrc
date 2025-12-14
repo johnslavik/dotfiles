@@ -118,16 +118,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-[ -f ${ATUIN_ENV:="$HOME/.atuin/bin/env" } ] \
-&& . "$HOME/.atuin/bin/env" \
-&& eval "$(atuin init bash --disable-up-arrow)"
-
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
-
-if which starship >/dev/null 2>&1; then
-    eval "$(starship init bash)"
-    starship_precmd
-fi
 
 hash -r
 
