@@ -14,19 +14,12 @@ alias autin='atuin'
 alias pre-commit='prek'
 
 function path-add() {
-    if [ -z "$1" ]; then return; fi
+    [ -z "$1" ] && return
 
     NEWPATH="$1"
     case ":${PATH}:" in
-        "$NEWPATH":*)
-            ;;
-        *:"$NEWPATH")
-            ;;
-        *:"$NEWPATH":*)
-            ;;
-        *)
-            export PATH="$PATH:$NEWPATH"
-            ;;
+        "$NEWPATH":* | *:"$NEWPATH"* | *:"$NEWPATH":* ) ;;
+        *) export PATH="$PATH:$NEWPATH" ;;
     esac
 }
 

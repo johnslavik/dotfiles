@@ -18,7 +18,4 @@
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
     [ -f "$HOME/.bashrc" ] && . "$HOME/.bashrc"
-    [ -f ${ENV:="$HOME/.env"} ] && . "$ENV"
-else
-   .
 fi
