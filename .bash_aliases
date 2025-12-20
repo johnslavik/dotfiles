@@ -24,7 +24,8 @@ function path-add() {
 }
 
 function fork-sync() {
-    git pull upstream main && git push origin main
+    local branch="${1:-main}"
+    git pull upstream "$branch" && git push origin "$branch"
 }
 
 function where() {
