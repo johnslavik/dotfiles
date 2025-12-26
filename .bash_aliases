@@ -39,5 +39,3 @@ if which wine 1>/dev/null 2>&1; then
     wine "$C/Games/Jazz2/Jazz2.exe" "$@"
   }
 fi
-
-[[ -f "$HOME/.private_aliases" ]] && source "$HOME/.private_aliases"

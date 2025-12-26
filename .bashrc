@@ -7,11 +7,11 @@
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f "$HOME/.bash_aliases" ]; then
+    source "$HOME/.bash_aliases"
 fi
 
-[ -f ${ENV:="$HOME/.env"} ] && . "$ENV"
+[ -f "$HOME/.env" ] && source "$HOME/.env"
 
 # If not running interactively, don't do anything
 case $- in
