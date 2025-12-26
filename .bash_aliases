@@ -1,3 +1,4 @@
+# shellcheck shell=bash
 alias c=clear
 alias cp='cp -vi'
 alias mv='mv -vi'
@@ -29,14 +30,14 @@ function fork-sync() {
 }
 
 function where() {
-  which -a $1 | uniq
+  which -a "$1" | uniq
 }
 
 if which wine 1>/dev/null 2>&1; then
   export C=~/.wine/drive_c
   jazz() {
-    wine $C/Games/Jazz2/Jazz2.exe $@
+    wine "$C/Games/Jazz2/Jazz2.exe" "$@"
   }
 fi
 
-[[ -f ~/.private_aliases ]] && . ~/.private_aliases
+[[ -f "$HOME/.private_aliases" ]] && source "$HOME/.private_aliases"
