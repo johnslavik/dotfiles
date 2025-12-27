@@ -17,10 +17,6 @@ def pvars(o: object) -> dict[str, object]:
     return {k: v for k, v in inspect.getmembers_static(o) if not k.startswith("_")}
 
 
-def quiet_flag() -> bool:
-    return "-q" in sys.orig_argv and "-q" not in sys.argv  # good enough heuristic
-
-
 if importlib.util.find_spec("pythonrc_manager"):
     from pythonrc_manager import DisplayHookPatcher as _DisplayHookPatcher
     from pythonrc_manager import init_rc_script as _init_rc_script
@@ -37,7 +33,7 @@ if importlib.util.find_spec("pythonrc_manager"):
         if (
             not int(os.environ.get("PYTHONRC_VERBOSE", "0"))
             and not important
-            or quiet_flag()
+            or sys.flags.quiet
         ):
             return
         kwargs.setdefault("file", sys.stderr)
