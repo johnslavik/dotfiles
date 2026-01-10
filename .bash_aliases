@@ -14,6 +14,7 @@ alias r='cargo run --quiet --'
 alias autin='atuin'
 alias pre-commit='prek'
 alias cat='cat -v'
+alias cd='pushd'
 
 function path-add() {
   [ -z "$1" ] && return
