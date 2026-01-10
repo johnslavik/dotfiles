@@ -10,6 +10,10 @@ name = "rust"
 rulers = [100]
 auto-format = false
 
+[language-server.ty]
+command = "ty"
+args= ["server"]
+
 [language-server.pyright]
 command = "pyright-langserver"
 args = ["--stdio"]
@@ -21,10 +25,13 @@ args = ["run", "ruff", "server"]
 
 [[language]]
 name = "python"
-rulers = [88]
-language-servers = ["pyright", "ruff"]
-auto-format = false
 scope = "source.python"
+language-servers = [
+  "ruff",
+  "ty",
+  "pyright"
+]
+auto-format = false
 injection-regex = "python"
 file-types = ["py", "pyi", ".pythonrc"]
 roots = ["setup.py", "setup.cfg", "pyproject.toml", "."]
