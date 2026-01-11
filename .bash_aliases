@@ -15,6 +15,10 @@ alias autin='atuin'
 alias pre-commit='prek'
 alias cat='cat -v'
 alias cd='pushd'
+alias k='kill %1'
+alias k1='kill %1'
+alias k2='kill %2'
+alias k3='kill %3'
 
 function path-add() {
   [ -z "$1" ] && return
