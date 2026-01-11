@@ -2,8 +2,6 @@ import importlib.util
 import inspect
 import os
 import sys
-import inspect
-import importlib.util
 from collections.abc import Callable
 from functools import partial
 from typing import Any
@@ -56,8 +54,6 @@ if importlib.util.find_spec("pythonrc_manager"):
 
     _dp = _DisplayHookPatcher(do_pprint)  # 🦈
     _dp.start()
-    report(f"Initialized (using {_dp.printer} displayhook)", important=True)
-
     d = sys.displayhook
 
     if __name__ == "__main__":
