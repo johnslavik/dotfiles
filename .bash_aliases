@@ -15,6 +15,7 @@ alias autin='atuin'
 alias pre-commit='prek'
 alias cat='cat -v'
 alias cd='pushd'
+alias j='jobs'
 alias k="kill %1 && printf '\033[H\033[J'"
 alias k1="kill %1 && printf '\033[H\033[J'"
 alias k2="kill %2 && printf '\033[H\033[J'"
