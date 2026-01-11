@@ -14,12 +14,34 @@ alias r='cargo run --quiet --'
 alias autin='atuin'
 alias pre-commit='prek'
 alias cat='cat -v'
-alias cd='pushd'
 alias j='jobs'
 alias k="kill %1 && printf '\033[H\033[J'"
 alias k1="kill %1 && printf '\033[H\033[J'"
 alias k2="kill %2 && printf '\033[H\033[J'"
 alias k3="kill %3 && printf '\033[H\033[J'"
+
+function cd() {
+  if [ "$#" -eq 0 ] || [ "$#" -gt 1 ] || [[ "$*" =~ "--help" ]]; then
+    # `cd`, `cd ... ... [...]+` and `cd --help` is unchanged
+    command cd "$@"
+  elif [ "$1" = "-" ]; then
+    # `cd -` becomes `popd`
+    popd
+  else
+    # `cd X` becomes `pushd [X or find X in zoxide]`  
+    local match="$(zoxide query "$1" 2>/dev/null)"
+    [ "$PWD" -ef "$match" ] && match=""
+    [ -z "$match" ] && {
+      [ ! -d "$1" ] && return
+      [ "$PWD" -ef "$1" ] && return
+    }
+    if [ -z "$match" ]; then
+      pushd "$1"
+    else
+      pushd "$1" 2>/dev/null || pushd "$match"
+    fi
+  fi
+}
 
 function z() {
   local match="$(zoxide query "$1")"
