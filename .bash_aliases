@@ -15,10 +15,10 @@ alias autin='atuin'
 alias pre-commit='prek'
 alias cat='cat -v'
 alias cd='pushd'
-alias k='kill %1'
-alias k1='kill %1'
-alias k2='kill %2'
-alias k3='kill %3'
+alias k="kill %1 && printf '\033[H\033[J'"
+alias k1="kill %1 && printf '\033[H\033[J'"
+alias k2="kill %2 && printf '\033[H\033[J'"
+alias k3="kill %3 && printf '\033[H\033[J'"
 
 function path-add() {
   [ -z "$1" ] && return
