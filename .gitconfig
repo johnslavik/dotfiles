@@ -4,6 +4,7 @@
 	signingkey = ~/.ssh/id_ed25519.pub
 
 [core]
+    editor = hx
 	excludesfile = ~/.gitignore_global
 	pager = delta
 
