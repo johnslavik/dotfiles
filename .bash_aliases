@@ -21,6 +21,11 @@ alias k1="kill %1 && printf '\033[H\033[J'"
 alias k2="kill %2 && printf '\033[H\033[J'"
 alias k3="kill %3 && printf '\033[H\033[J'"
 
+function z() {
+  local match="$(zoxide query "$1")"
+  [ -n "$match" ] && pushd "$match"
+}
+
 function path-add() {
   [ -z "$1" ] && return
 
