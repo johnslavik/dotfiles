@@ -10,7 +10,6 @@ pagedown = "page_cursor_half_down"
   "move_line_up",
   "paste_before",
 ]
-    
 
 [editor]
 line-number = "relative"
@@ -20,6 +19,7 @@ true-color = true
 bufferline = "multiple"
 idle-timeout = 10
 cursorline = true
+default-yank-register = "+"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -35,12 +35,12 @@ other-lines = "error"
 
 [editor.statusline]
 left = [
-    "mode",
-    "spinner",
-    "file-name",
-    "file-modification-indicator",
-    "spacer",
-    "diagnostics",
+  "mode",
+  "spinner",
+  "file-name",
+  "file-modification-indicator",
+  "spacer",
+  "diagnostics",
 ]
 right = ["version-control", "selections", "position", "file-encoding"]
 
