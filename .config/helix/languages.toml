@@ -42,7 +42,7 @@ auto-format = false
 [[language]]
 name = "python"
 scope = "source.python"
-language-servers = ["ruff", "ty"]
+language-servers = ["ty"]
 auto-format = false
 injection-regex = "python"
 file-types = ["py", "pyi", ".pythonrc"]
