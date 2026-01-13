@@ -11,8 +11,8 @@ command = "tombi"
 command = "ty"
 args = ["server"]
 
-[language-server.pyright]
-command = "pyright-langserver"
+[language-server.basedpyright]
+command = "basedpyright-langserver"
 args = ["--stdio"]
 config = {  }
 
@@ -42,7 +42,7 @@ auto-format = false
 [[language]]
 name = "python"
 scope = "source.python"
-language-servers = ["ruff", "ty", "pyright"]
+language-servers = ["ruff", "ty", "basedpyright"]
 auto-format = false
 injection-regex = "python"
 file-types = ["py", "pyi", ".pythonrc"]
