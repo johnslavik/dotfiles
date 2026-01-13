@@ -19,6 +19,7 @@ alias k="kill %1 && printf '\033[H\033[J'"
 alias k1="kill %1 && printf '\033[H\033[J'"
 alias k2="kill %2 && printf '\033[H\033[J'"
 alias k3="kill %3 && printf '\033[H\033[J'"
+alias zq="zoxide query"
 
 function cd() {
   if [ "$#" -eq 0 ] || [ "$#" -gt 1 ] || [[ "$*" =~ "--help" ]]; then
