@@ -1,6 +1,35 @@
 [language-server.rust-analyzer.config.check]
 command = "clippy"
 
+[language-server.clangd]
+command = "clangd"
+
+[language-server.tombi]
+command = "tombi"
+
+[language-server.ty]
+command = "ty"
+args = ["server"]
+
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+config = {  }
+
+[language-server.ruff]
+command = "uv"
+args = ["run", "ruff", "server"]
+
+[[language]]
+name = "c"
+auto-format = false
+language-servers = ["clangd"]
+
+[[language]]
+name = "toml"
+auto-format = true
+language-servers = ["tombi"]
+
 [[language]]
 name = "markdown"
 rulers = [80]
@@ -10,27 +39,10 @@ name = "rust"
 rulers = [100]
 auto-format = false
 
-[language-server.ty]
-command = "ty"
-args= ["server"]
-
-[language-server.pyright]
-command = "pyright-langserver"
-args = ["--stdio"]
-config = {}
-
-[language-server.ruff]
-command = "uv"
-args = ["run", "ruff", "server"]
-
 [[language]]
 name = "python"
 scope = "source.python"
-language-servers = [
-  "ruff",
-  "ty",
-  "pyright"
-]
+language-servers = ["ruff", "ty", "pyright"]
 auto-format = false
 injection-regex = "python"
 file-types = ["py", "pyi", ".pythonrc"]
