@@ -33,7 +33,6 @@ function cd() {
     local match="$(zoxide query "$1" 2>/dev/null)"
     [ "$PWD" -ef "$match" ] && match=""
     [ -z "$match" ] && {
-      [ ! -d "$1" ] && return
       [ "$PWD" -ef "$1" ] && return
     }
     if [ -z "$match" ]; then
