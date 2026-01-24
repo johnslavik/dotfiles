@@ -10,6 +10,7 @@ pagedown = "page_cursor_half_down"
   "move_line_up",
   "paste_before",
 ]
+g = { G = "goto_file_end" }
 
 [editor]
 line-number = "relative"
