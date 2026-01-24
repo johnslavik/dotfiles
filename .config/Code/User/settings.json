@@ -812,5 +812,7 @@
       "action": "allow"
     }
   ],
-  "github.copilot.nextEditSuggestions.enabled": false
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "errorLens.onSave": true,
+  "errorLens.onSaveUpdateOnActiveEditorChange": false
 }
