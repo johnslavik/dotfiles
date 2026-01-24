@@ -27,7 +27,6 @@ language-servers = ["clangd"]
 
 [[language]]
 name = "toml"
-auto-format = true
 language-servers = ["tombi"]
 
 [[language]]
