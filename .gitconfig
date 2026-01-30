@@ -5,7 +5,6 @@
 
 [core]
     editor = hx
-	excludesfile = ~/.gitignore_global
 	pager = delta
 
 [merge]
