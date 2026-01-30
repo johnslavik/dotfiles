@@ -1,0 +1,16 @@
+theme = "Apple System Colors"
+keybind = "alt+up=goto_split:up"
+keybind = "alt+down=goto_split:down"
+keybind = "alt+right=goto_split:previous"
+keybind = "alt+left=goto_split:next"
+
+window-padding-x = 15
+window-padding-y = 10
+window-padding-color = extend-always
+unfocused-split-opacity = 1
+font-feature = -calt, -liga, -dlig
+
+cursor-style = bar
+cursor-style-blink = true
+shell-integration-features = no-cursor
+
