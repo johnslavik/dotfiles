@@ -1,5 +1,4 @@
 {
-  "workbench.colorTheme": "Default Dark+",
   "files.autoSave": "afterDelay",
   "editor.selectionClipboard": false,
   "git.enableSmartCommit": true,
@@ -109,5 +108,6 @@
   },
   "errorLens.onSave": true,
   "errorLens.onSaveUpdateOnActiveEditorChange": false,
-  "extensions.ignoreRecommendations": true
+  "extensions.ignoreRecommendations": true,
+  "terminal.integrated.enableMultiLinePasteWarning": "never"
 }

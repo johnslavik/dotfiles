@@ -1,4 +1,4 @@
-theme = "Apple System Colors"
+theme = "CLRS"
 keybind = "alt+up=goto_split:up"
 keybind = "alt+down=goto_split:down"
 keybind = "alt+right=goto_split:previous"
