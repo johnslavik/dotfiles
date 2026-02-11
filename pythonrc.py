@@ -4,7 +4,7 @@ import os
 import sys
 from collections.abc import Callable
 from functools import partial
-from typing import Any
+from typing import Any, Never
 
 
 def pdir(o: object) -> list[str]:
@@ -19,6 +19,15 @@ if importlib.util.find_spec("pythonrc_manager"):
     from pythonrc_manager import DisplayHookPatcher as _DisplayHookPatcher
     from pythonrc_manager import init_rc_script as _init_rc_script
     from pythonrc_manager import project_rc_path as _project_rc_path
+    from pythonrc_manager import restart
+
+    class Restarter:
+        def __repr__(self) -> Never:
+            import atexit
+            atexit._run_exitfuncs()
+            restart()
+
+    r = Restarter()
 
     def report(
         *args: object,
