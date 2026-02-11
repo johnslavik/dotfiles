@@ -14,8 +14,6 @@
 # set PATH so it includes user's private bin if it exists
 [ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
 
-# if running bash
-if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
-    [ -f "$HOME/.bashrc" ] && . "$HOME/.bashrc"
-fi
+[ -f "$HOME/.bashrc" ] && source "$HOME/.bashrc"
+
+source "$HOME/.cargo/env"

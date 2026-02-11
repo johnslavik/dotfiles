@@ -13,4 +13,7 @@ font-feature = -calt, -liga, -dlig
 cursor-style = bar
 cursor-style-blink = true
 shell-integration-features = no-cursor
-
+shell-integration = bash
+auto-update = download
+auto-update-channel = tip
+macos-option-as-alt = true

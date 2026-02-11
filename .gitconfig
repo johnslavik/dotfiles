@@ -50,6 +50,9 @@
 [includeIf "gitdir:~/NeverBlink/"]
 	path = "~/.gitconfig_neverblink"
 
+[includeIf "gitdir:~/PandaDoc/"]
+    path = "~/.gitconfig_pandadoc"
+
 [commit]
 	gpgSign = true
 

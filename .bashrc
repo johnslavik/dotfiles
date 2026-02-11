@@ -14,11 +14,12 @@ fi
 [ -f "$HOME/.env" ] && source "$HOME/.env"
 
 # If not running interactively, don't do anything
-case $- in
-    *i*) ;;
-      *) return;;
-esac
-
+if [[ "$OSTYPE" != "darwin"* ]]; then
+    case $- in
+        *i*) ;;
+        *) return;;
+    esac
+fi
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -136,3 +137,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+. "$HOME/.cargo/env"
