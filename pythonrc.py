@@ -1,10 +1,15 @@
+from __future__ import annotations
+
 import importlib.util
 import inspect
 import os
 import sys
 from collections.abc import Callable
 from functools import partial
-from typing import Any, Never
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from typing import Any, Never
 
 
 def pdir(o: object) -> list[str]:
