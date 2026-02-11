@@ -15,6 +15,7 @@ def pvars(o: object) -> dict[str, object]:
     return {k: v for k, v in inspect.getmembers_static(o) if not k.startswith("_")}
 
 
+sys.path.append(os.path.expanduser("~"))
 if importlib.util.find_spec("pythonrc_manager"):
     from pythonrc_manager import DisplayHookPatcher as _DisplayHookPatcher
     from pythonrc_manager import init_rc_script as _init_rc_script
