@@ -44,6 +44,14 @@ function cd() {
   fi
 }
 
+function sudo() {
+  if [ "$#" -eq 0 ] || [[ "$*" =~ "--help" ]]; then
+    command sudo "$@"
+  else
+    command sudo -E env "PATH=$PATH" "$@"
+  fi
+}
+
 function z() {
   local match="$(zoxide query "$1")"
   [ -n "$match" ] && pushd "$match"
