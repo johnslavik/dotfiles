@@ -2,6 +2,7 @@
 alias c=clear
 alias cp='cp -vi'
 alias mv='mv -vi'
+alias mkdir='mkdir -v'
 alias rm='rm -vi'
 alias fdf='fd --max-results 1'
 alias chmox='chmod +x'
