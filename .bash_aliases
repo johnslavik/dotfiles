@@ -21,7 +21,19 @@ alias k1="kill %1 && printf '\033[H\033[J'"
 alias k2="kill %2 && printf '\033[H\033[J'"
 alias k3="kill %3 && printf '\033[H\033[J'"
 alias zq="zoxide query"
-alias py="python"
+alias tachyon="py -m profiling.sampling"
+
+function py() {
+  if [[ -e "./python.exe" ]] && \
+   [[ "$(git remote get-url upstream)" == "git@github.com:python/cpython.git" ]]; then
+    ./python.exe "$@"
+  elif [[ -e "./python" ]] && \
+   [[ "$(git remote get-url upstream)" == "git@github.com:python/cpython.git" ]]; then
+    ./python "$@"
+  else
+    python "$@"
+  fi
+}
 
 function cd() {
   if [ "$#" -eq 0 ] || [ "$#" -gt 1 ] || [[ "$*" =~ "--help" ]]; then

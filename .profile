@@ -16,4 +16,4 @@
 
 [ -f "$HOME/.bashrc" ] && source "$HOME/.bashrc"
 
-source "$HOME/.cargo/env"
+. "$HOME/.cargo/env"
