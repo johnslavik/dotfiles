@@ -15,5 +15,3 @@
 [ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
 
 [ -f "$HOME/.bashrc" ] && source "$HOME/.bashrc"
-
-. "$HOME/.cargo/env"
