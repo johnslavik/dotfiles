@@ -1,6 +1,15 @@
 [package]
 disabled = true
 
+[aws]
+disabled = true
+
+[buf]
+disabled = true
+
+[docker_context]
+disabled = true
+
 [python]
 symbol = "~ "
 format = "[($symbol$virtualenv )]($style)"
