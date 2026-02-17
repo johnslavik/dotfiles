@@ -28,3 +28,5 @@ t.*
 .scratches/
 
 monkeytype.sqlite3
+
+**/.claude/settings.local.json
