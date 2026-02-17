@@ -74,6 +74,7 @@ function z() {
 
 function path-add() {
   [ -z "$1" ] && return
+  [ -d "$1" ] || return
 
   NEWPATH="$1"
   case ":${PATH}:" in
