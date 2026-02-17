@@ -35,13 +35,16 @@ function py() {
 }
 
 function cd() {
-  if [ "$#" -eq 0 ] || [ "$#" -gt 1 ] || [[ "$*" =~ "--help" ]]; then
-    # `cd`, `cd ... ... [...]+` and `cd --help` is unchanged
+  if [ "$#" -gt 1 ] || [[ "$*" =~ "--help" ]]; then
+    # cd ... ... [...]+` and `cd --help` is unchanged
     command cd "$@"
   elif [ "$1" = "-" ]; then
     # `cd -` becomes `popd`
     popd
   else
+    if [ "$#" -eq 0 ]; then
+        pushd ~
+    fi
     # `cd X` becomes `pushd [X or find X in zoxide]`  
     local match="$(zoxide query "$1" 2>/dev/null)"
     [ "$PWD" -ef "$match" ] && match=""
