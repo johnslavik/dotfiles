@@ -53,6 +53,9 @@
 [includeIf "gitdir:~/PandaDoc/"]
     path = "~/.gitconfig_pandadoc"
 
+[includeIf "gitdir:~/PandaDocGH/"]
+    path = "~/.gitconfig_pandadoc_github"
+
 [commit]
 	gpgSign = true
 
@@ -78,3 +81,9 @@
 
 [submodule]
 	recurse = true
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
