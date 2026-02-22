@@ -1,7 +1,0 @@
-[user]
-	email = anoptyk@gmail.com
-	name = anoptyk
-	signingkey = ~/.ssh/id_ed25519_anoptyk.pub
-
-[core]
-	sshCommand = ssh -i ~/.ssh/id_ed25519_anoptyk -o IdentitiesOnly=yes

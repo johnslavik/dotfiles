@@ -8,7 +8,7 @@
 	pager = delta
 
 [merge]
-	conflictStyle = zdiff3
+	conflictstyle = zdiff3
 
 [rebase]
 	autostash = true
@@ -23,41 +23,23 @@
 [delta]
 	navigate = true
 
-[includeIf "gitdir:~/Codezarre/"]
-	path = "~/.gitconfig_codezarre"
-
-[includeIf "gitdir:~/Printbox/"]
-	path = "~/.gitconfig_printbox"
-
-[includeIf "gitdir:~/Python/"]
+[includeif "gitdir:~/Python/"]
 	path = "~/.gitconfig_python"
 
-[includeIf "gitdir:~/Rustmeet/"]
-	path = "~/.gitconfig_rust"
-
-[includeIf "gitdir:~/ScaffOps/"]
-	path = "~/.gitconfig_rust"
-
-[includeIf "gitdir:~/Wecamo/"]
+[includeif "gitdir:~/Wecamo/"]
 	path = "~/.gitconfig_wecamo" 
 
-[includeIf "gitdir:~/HAI/"]
+[includeif "gitdir:~/HAI/"]
 	path = "~/.gitconfig_hai"
 
-[includeIf "gitdir:~/Anoptyk/"]
-	path = "~/.gitconfig_anoptyk"
-
-[includeIf "gitdir:~/NeverBlink/"]
-	path = "~/.gitconfig_neverblink"
-
-[includeIf "gitdir:~/PandaDoc/"]
+[includeif "gitdir:~/PandaDoc/"]
     path = "~/.gitconfig_pandadoc"
 
-[includeIf "gitdir:~/PandaDocGH/"]
+[includeif "gitdir:~/PandaDocGH/"]
     path = "~/.gitconfig_pandadoc_github"
 
 [commit]
-	gpgSign = true
+	gpgsign = true
 
 [gpg]
 	format = ssh
@@ -74,10 +56,6 @@
 
 [alias]
 	tree = log --graph --decorate --pretty=oneline --abbrev-commit
-
-[maintenance]
-	repo = ~/Python/cpython
-	repo = ~/Apache/airflow
 
 [submodule]
 	recurse = true

@@ -1,2 +1,5 @@
 [user]
 	email = bartosz@ilikepython.com
+
+[maintenance]
+	repo = ~/Python/cpython

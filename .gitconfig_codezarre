@@ -1,7 +1,0 @@
-[user]
-	email = codezarre@gmail.com
-	name = Codezarre
-	signingkey = ~/.ssh/id_ed25519_codezarre.pub
-
-[core]
-	sshCommand = ssh -i ~/.ssh/id_ed25519_codezarre -o IdentitiesOnly=yes
