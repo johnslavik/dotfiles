@@ -1,8 +1,4 @@
 theme = "GitHub Dark"
-keybind = "alt+up=goto_split:up"
-keybind = "alt+down=goto_split:down"
-keybind = "alt+right=goto_split:previous"
-keybind = "alt+left=goto_split:next"
 
 window-padding-x = 15
 window-padding-y = 10
