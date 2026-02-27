@@ -44,6 +44,7 @@ function cd() {
   else
     if [ "$#" -eq 0 ]; then
         pushd ~
+        return
     fi
     # `cd X` becomes `pushd [X or find X in zoxide]`  
     local match="$(zoxide query "$1" 2>/dev/null)"
