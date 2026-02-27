@@ -22,18 +22,6 @@ alias k3="kill %3 && printf '\033[H\033[J'"
 alias zq="zoxide query"
 alias tachyon="py -m profiling.sampling"
 
-function py() {
-  if [[ -e "./python.exe" ]] && \
-   [[ "$(git remote get-url upstream)" == "git@github.com:python/cpython.git" ]]; then
-    ./python.exe "$@"
-  elif [[ -e "./python" ]] && \
-   [[ "$(git remote get-url upstream)" == "git@github.com:python/cpython.git" ]]; then
-    ./python "$@"
-  else
-    python "$@"
-  fi
-}
-
 function cd() {
   if [ "$#" -gt 1 ] || [[ "$*" =~ "--help" ]]; then
     # cd ... ... [...]+` and `cd --help` is unchanged
