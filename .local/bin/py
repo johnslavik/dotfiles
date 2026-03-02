@@ -5,6 +5,12 @@ if [[ -e "./python.exe" ]] && \
 elif [[ -e "./python" ]] && \
   [[ "$(git remote get-url upstream)" == "git@github.com:python/cpython.git" ]]; then
   ./python "$@"
+elif [[ -e "./python.exe" ]] && \
+  [[ "$(git remote get-url upstream)" == "git@github.com:allyourkeywords/allyourkeywords.git" ]]; then
+  ./python.exe "$@"
+elif [[ -e "./python" ]] && \
+  [[ "$(git remote get-url upstream)" == "git@github.com:allyourkeywords/allyourkeywords.git" ]]; then
+  ./python "$@"
 else
   python "$@"
 fi
