@@ -109,5 +109,13 @@
   "errorLens.onSave": true,
   "errorLens.onSaveUpdateOnActiveEditorChange": false,
   "extensions.ignoreRecommendations": true,
-  "terminal.integrated.enableMultiLinePasteWarning": "never"
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "terminal.integrated.initialHint": false,
+  "editor.lineNumbers": "relative"
 }

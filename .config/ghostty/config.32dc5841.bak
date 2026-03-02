@@ -1,6 +1,4 @@
-theme = "Dark Pastel"
-# theme = "CLRS"  # Light
-# theme = "Atom One Light"
+theme = "CLRS"
 keybind = "alt+up=goto_split:up"
 keybind = "alt+down=goto_split:down"
 keybind = "alt+right=goto_split:previous"
@@ -19,4 +17,3 @@ shell-integration = bash
 auto-update = download
 auto-update-channel = tip
 macos-option-as-alt = true
-keybind = shift+enter=text:\x1b\r
