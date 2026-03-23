@@ -77,6 +77,10 @@ function fork-sync() {
   git pull upstream "$branch" && git push origin "$branch"
 }
 
+function shell-restart() {
+  exec "$0" -l
+}
+
 function where() {
   which -a "$1" | uniq
 }
