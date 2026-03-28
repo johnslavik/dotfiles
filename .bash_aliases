@@ -85,6 +85,11 @@ function where() {
   which -a "$1" | uniq
 }
 
+function fuck-off() {
+  find "$1" -type f \( -perm -111 -o -name "*.dylib" \) -print0   | xargs -0 -n 1 -P 4 codesign --force --sign -
+  codesign --force --deep --sign - "$1"
+}
+
 if which wine 1>/dev/null 2>&1; then
   export C=~/.wine/drive_c
   jazz() {
