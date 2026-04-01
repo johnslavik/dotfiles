@@ -30,3 +30,6 @@ t.*
 monkeytype.sqlite3
 
 **/.claude/settings.local.json
+
+.fastembed_cache
+.tt
