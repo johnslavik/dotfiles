@@ -1,3 +1,6 @@
 [submodule "bundled/pythonrc-manager"]
 	path = bundled/pythonrc-manager
 	url = git@github.com:johnslavik/pythonrc-manager
+[submodule "my-git-plugins"]
+	path = my-git-plugins
+	url = git@github.com:johnslavik/my-git-plugins

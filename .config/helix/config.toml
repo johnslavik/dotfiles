@@ -10,7 +10,13 @@ pagedown = "page_cursor_half_down"
   "move_line_up",
   "paste_before",
 ]
+"A-b" = "move_prev_word_start"
+"A-f" = "move_next_word_start"
 g = { G = "goto_file_end" }
+
+[keys.insert]
+"A-b" = "move_prev_word_start"
+"A-f" = "move_next_word_start"
 
 [editor]
 line-number = "relative"
