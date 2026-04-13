@@ -13,7 +13,10 @@ alias e='exa -F'
 alias r='cargo run --quiet --'
 alias autin='atuin'
 alias pre-commit='prek'
-alias cat='cat -v'
+
+# This tripped up AI way too often, I'm sick of it
+# alias cat='cat -v'
+
 alias j='jobs'
 alias k="kill %1 && printf '\033[H\033[J'"
 alias k1="kill %1 && printf '\033[H\033[J'"
@@ -78,11 +81,18 @@ function fork-sync() {
 }
 
 function shell-restart() {
-  exec "$0" -l
+  exec "/opt/homebrew/bin/bash" -l
 }
 
 function where() {
   which -a "$1" | uniq
+}
+
+function wt() {
+  pushd ".wt/$1" 2>/dev/null || {
+    # shellcheck disable=SC2164
+    git wt add "$1" && pushd ".wt/$1"
+  }
 }
 
 function fuck-off() {
