@@ -1,0 +1,16 @@
+{
+  "name": "gh-148191-f1-help-repl",
+  "description": "#148191: F1 help mode in the REPL",
+  "repo_path": "/Users/bartosz.slawecki/Python/cpython",
+  "branch": "gh-148191-f1-help-repl",
+  "worktree_path": "/Users/bartosz.slawecki/Python/cpython-worktrees/gh-148191",
+  "zmx_session": "gh-148191-f1-help-repl",
+  "pr_url": null,
+  "pr_number": null,
+  "pr_repo": null,
+  "created_at": "2026-04-26T19:00:48.667899Z",
+  "updated_at": "2026-04-26T20:44:49.322505Z",
+  "status": "active",
+  "notes": "registered retroactively from existing worktree",
+  "next_step": "Branch is empty (0 commits ahead of main, last touched 7 days ago); decide whether to start the REPL-variant F1 help implementation here or abandon this worktree in favor of one of the other two #148191 variants."
+}

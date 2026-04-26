@@ -1,0 +1,16 @@
+{
+  "name": "gh-145240-star-pattern-error",
+  "description": "#145240: Specialize `match` syntax error for star pattern outside sequence pattern",
+  "repo_path": "/Users/bartosz.slawecki/Python/cpython",
+  "branch": "gh-145240-star-pattern-error",
+  "worktree_path": "/Users/bartosz.slawecki/Python/cpython-worktrees/gh-145240",
+  "zmx_session": "gh-145240-star-pattern-error",
+  "pr_url": null,
+  "pr_number": null,
+  "pr_repo": null,
+  "created_at": "2026-04-26T19:00:48.667899Z",
+  "updated_at": "2026-04-26T20:46:01.806936Z",
+  "status": "active",
+  "notes": "registered retroactively from existing worktree",
+  "next_step": "push branch to origin and open a PR against python/cpython for gh-145240"
+}

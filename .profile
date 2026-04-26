@@ -15,3 +15,7 @@
 [ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
 
 [ -f "$HOME/.bashrc" ] && source "$HOME/.bashrc"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/bartosz.slawecki/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

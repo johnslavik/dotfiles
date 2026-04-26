@@ -1,5 +1,5 @@
 theme = "Dark Pastel"
-# theme = "CLRS"  # Light
+# theme = "CLRS"
 # theme = "Atom One Light"
 
 window-padding-x = 15
