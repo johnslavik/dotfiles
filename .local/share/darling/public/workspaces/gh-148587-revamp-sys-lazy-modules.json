@@ -4,13 +4,12 @@
   "repo_path": "/Users/bartosz.slawecki/Python/cpython",
   "branch": "gh-148587-revamp-sys-lazy-modules",
   "worktree_path": "/Users/bartosz.slawecki/Python/cpython-worktrees/gh-148587",
-  "zmx_session": "gh-148587-revamp-sys-lazy-modules",
   "pr_url": null,
   "pr_number": null,
   "pr_repo": null,
   "created_at": "2026-04-26T18:18:09.570538Z",
   "status": "active",
   "notes": "",
-  "updated_at": "2026-04-26T20:44:44.829065Z",
-  "next_step": "Stage the modified files and new NEWS entry, commit, push the branch, and open a PR against python/cpython for gh-148587."
+  "updated_at": "2026-04-26T21:38:24.470639Z",
+  "next_step": "Stage the modified files and new NEWS entry, commit with a clear message, and push the branch to origin. Do not open a PR \u2014 user will do that."
 }
