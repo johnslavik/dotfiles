@@ -25,22 +25,22 @@ Walk the user through a body of content one sentence at a time, answering questi
 
 ## Depth prefix format
 
-Each `›` represents one level of nesting. The prefix goes before the `[N/T]` counter:
+Each `›` represents one level of nesting. The prefix is always rendered as an inline code block, then a space, then the sentence text:
 
-| Depth | Prefix format | Example |
-|-------|--------------|---------|
-| 1 (outermost) | `[N/T]` | `[3/11] Debezium watches the outbox table…` |
-| 2 | `[› N/T]` | `[› 1/4] The WAL is Postgres's write-ahead log…` |
-| 3 | `[›› N/T]` | `[›› 1/2] A replication slot is a cursor…` |
+| Depth | Rendered output |
+|-------|----------------|
+| 1 (outermost) | `` `[3/11]` `` Debezium watches the outbox table… |
+| 2 | `` `[› 1/4]` `` The WAL is Postgres's write-ahead log… |
+| 3 | `` `[›› 1/2]` `` A replication slot is a cursor… |
 
-Always include the depth prefix. Never drop it, even at depth 1.
+Always wrap the prefix in backticks. Never write it as plain text.
 
 ## Resuming the outer session
 
 When an inner session finishes (last sentence presented and user signals done, or user says "exit" / "back to outer"), re-present the outer session's paused sentence with a resumption marker:
 
 ```
-↩ [3/11] Debezium watches the outbox table via CDC (reading the Postgres WAL / replication slot).
+↩ `[3/11]` Debezium watches the outbox table via CDC (reading the Postgres WAL / replication slot).
 ```
 
 The `↩` signals "we're back". After this, continue the outer session normally.
