@@ -35,15 +35,21 @@ Each `›` represents one level of nesting. The prefix is always rendered as an 
 
 Always wrap the prefix in backticks. Never write it as plain text.
 
-## Resuming the outer session
+## Resuming after a digression
 
-When an inner session finishes (last sentence presented and user signals done, or user says "exit" / "back to outer"), re-present the outer session's paused sentence with a resumption marker:
+Whenever control returns to a session level — either because an inner session ended, or because a plain question was answered — **always re-present the last sentence shown at that level** with a resumption marker before waiting for the user to advance.
+
+When re-presenting, you may add a brief parenthetical that anchors the sentence to the digression just covered, so the user can see how it fits:
 
 ```
-↩ `[3/11]` Debezium watches the outbox table via CDC (reading the Postgres WAL / replication slot).
+↩ `[3/11]` TCP guarantees delivery but not ordering across parallel streams. *(TCP being the transport layer we just covered)*
 ```
 
-The `↩` signals "we're back". After this, continue the outer session normally.
+```
+↩ `[1/9]` A process is an independent program instance managed by the OS. *(where "independent" means its own memory space — the isolation we just discussed)*
+```
+
+Keep the parenthetical short — one clause. Omit it if the digression was brief and the sentence already makes sense on its own. The `↩` signals "we're back here". After re-presenting, wait for the user to advance normally. Do not auto-advance.
 
 ## Other rules
 
