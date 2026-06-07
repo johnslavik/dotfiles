@@ -25,6 +25,10 @@ alias k3="kill %3 && printf '\033[H\033[J'"
 alias zq="zoxide query"
 alias tachyon="py -m profiling.sampling"
 
+function feedparse() {
+  uvx --with feedparser python -c 'import readline, sys, feedparser; print(feedparser.parse(sys.stdin.read())' | yq -P
+}
+
 function cd() {
   if [ "$#" -gt 1 ] || [[ "$*" =~ "--help" ]]; then
     # cd ... ... [...]+` and `cd --help` is unchanged
