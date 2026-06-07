@@ -13,3 +13,6 @@
 [submodule "skills/public/airflow-steward"]
 	path = skills/public/airflow-steward
 	url = https://github.com/apache/airflow-steward.git
+[submodule "skills/public/darling"]
+	path = skills/public/darling
+	url = https://github.com/johnslavik/darling.git
