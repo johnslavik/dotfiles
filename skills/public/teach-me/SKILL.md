@@ -1,6 +1,6 @@
 ---
 name: teach-me
-description: Use this skill when the user invokes /teach-me (with or without a topic argument). Switches into part-by-part teaching mode on the most recent explanation given (or on a new explanation of the provided topic). Presents one logical part at a time, prefixed with [N/T], and waits for questions before advancing. Supports recursive nesting: the user may invoke /teach-me again on an answer given during a teach-me session, creating an inner session; when the inner session ends, the outer session resumes exactly where it paused.
+description: "Use this skill when the user invokes /teach-me (with or without a topic argument). Switches into part-by-part teaching mode on the most recent explanation given (or on a new explanation of the provided topic). Presents one logical part at a time, prefixed with [N/T], and waits for questions before advancing. Supports recursive nesting: the user may invoke /teach-me again on an answer given during a teach-me session, creating an inner session; when the inner session ends, the outer session resumes exactly where it paused."
 ---
 
 # teach-me
