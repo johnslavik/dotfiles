@@ -2,6 +2,12 @@
 if [[ -e "./python.exe" ]] && \
   [[ "$(git remote get-url upstream)" == "git@github.com:python/cpython.git" ]]; then
   ./python.exe "$@"
+elif [[ -e "./build/python.exe" ]] && \
+  [[ "$(git remote get-url upstream)" == "git@github.com:python/cpython.git" ]]; then
+  ./build/python.exe "$@"
+elif [[ -e "./build/python" ]] && \
+  [[ "$(git remote get-url upstream)" == "git@github.com:python/cpython.git" ]]; then
+  ./build/python "$@"
 elif [[ -e "./python" ]] && \
   [[ "$(git remote get-url upstream)" == "git@github.com:python/cpython.git" ]]; then
   ./python "$@"
