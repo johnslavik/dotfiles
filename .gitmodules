@@ -4,3 +4,12 @@
 [submodule "my-git-plugins"]
 	path = my-git-plugins
 	url = git@github.com:johnslavik/my-git-plugins
+[submodule "skills/public/cpython-skills"]
+	path = skills/public/cpython-skills
+	url = https://github.com/gpshead/cpython-skills.git
+[submodule "skills/public/cext-review-toolkit"]
+	path = skills/public/cext-review-toolkit
+	url = https://github.com/devdanzin/cext-review-toolkit.git
+[submodule "skills/public/airflow-steward"]
+	path = skills/public/airflow-steward
+	url = https://github.com/apache/airflow-steward.git
