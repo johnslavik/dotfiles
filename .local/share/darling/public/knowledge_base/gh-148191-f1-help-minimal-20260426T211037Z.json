@@ -1,0 +1,17 @@
+{
+  "name": "gh-148191-f1-help-minimal",
+  "description": "#148191: F1 help mode in the REPL",
+  "repo_path": "/Users/bartosz.slawecki/Python/cpython",
+  "branch": "gh-148191-f1-help-minimal",
+  "worktree_path": "/Users/bartosz.slawecki/Python/cpython-worktrees/gh-148191-minimal",
+  "pr_url": null,
+  "pr_number": null,
+  "pr_repo": null,
+  "created_at": "2026-04-26T19:00:48.667899Z",
+  "updated_at": "2026-04-26T20:44:45.942585Z",
+  "status": "active",
+  "notes": "registered retroactively from existing worktree",
+  "next_step": "Commit the uncommitted minimal patch to commands.py/reader.py/test_pyrepl.py, run test_pyrepl, then push the branch and open a PR comparing this stripped-down approach against the other two #148191 variants.",
+  "archived_at": "2026-04-26T21:10:37.474456Z",
+  "archive_reason": "abandoned by user \u2014 F1 work not needed"
+}

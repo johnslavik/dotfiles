@@ -1,0 +1,20 @@
+{
+  "name": "super-operator-hints",
+  "description": "Add 'Did you mean?' hints when operators are used on super() objects",
+  "tracker": "github",
+  "issue_id": null,
+  "repo_path": "/Users/bartosz.slawecki/Python/cpython",
+  "branch": "super-operator-hints",
+  "worktree_path": "/Users/bartosz.slawecki/Python/cpython-super-operator-hints",
+  "pr_url": null,
+  "pr_number": null,
+  "pr_repo": "python/cpython",
+  "created_at": "2026-06-01T23:13:46.448394Z",
+  "updated_at": "2026-06-01T23:13:46.448394Z",
+  "status": "active",
+  "notes": "",
+  "next_step": "file the GitHub issue, update issue_id in this record, then open the PR",
+  "progress": "- 2026-06-02: explored super() implementation in Objects/typeobject.c and ceval.c\n- 2026-06-02: found prior art in bpo-1498363 (gh-43439) \u2014 adding operators was rejected; hint approach is correct\n- 2026-06-02: implemented slot stubs for all operators/protocols in PySuper_Type\n- 2026-06-02: added __enter__/__exit__/__aenter__/__aexit__ to tp_methods for context manager hints\n- 2026-06-02: 73/73 tests pass (40 original + 33 new); bool(super()) regression preserved",
+  "tried": [],
+  "blockers": null
+}

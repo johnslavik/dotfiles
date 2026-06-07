@@ -1,0 +1,20 @@
+{
+  "name": "gh-150700-class-scope-comprehension-with-lambda-raises-syste",
+  "description": "gh-150700: Class-scope comprehension with lambda raises SystemError",
+  "tracker": "github",
+  "issue_id": "gh-150700",
+  "repo_path": "/Users/bartosz.slawecki/Python/cpython",
+  "branch": "gh-150700-class-scope-comprehension-with-lambda-raises-syste",
+  "worktree_path": "/Users/bartosz.slawecki/Python/cpython-worktrees/gh-150700",
+  "pr_url": null,
+  "pr_number": null,
+  "pr_repo": null,
+  "created_at": "2026-06-01T19:46:35.218291Z",
+  "updated_at": "2026-06-01T19:46:35.218291Z",
+  "status": "active",
+  "notes": "",
+  "next_step": "read the issue and decide on an approach",
+  "progress": "",
+  "tried": [],
+  "blockers": null
+}

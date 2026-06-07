@@ -2,7 +2,7 @@
   "name": "gh-148587-revamp-sys-lazy-modules",
   "description": "#148587: Revamp `sys.lazy_modules`",
   "repo_path": "/Users/bartosz.slawecki/Python/cpython",
-  "branch": "gh-148587-revamp-sys-lazy-modules",
+  "branch": "gh-148587-doc-sys-lazy-modules",
   "worktree_path": "/Users/bartosz.slawecki/Python/cpython-worktrees/gh-148587",
   "pr_url": "https://github.com/python/cpython/pull/149408",
   "pr_number": 149408,
@@ -10,7 +10,7 @@
   "created_at": "2026-04-26T18:18:09.570538Z",
   "status": "active",
   "notes": "",
-  "updated_at": "2026-05-05T21:53:58.240521Z",
-  "next_step": "wait for CI on 46c6033 (docs cleanup: drop _lazy_modules + set_lazy_imports cross-ref)",
-  "progress": "- 2026-05-05: Re-exposed live lazy registry as sys._lazy_modules (undocumented); sys.lazy_modules remains frozendict snapshot. Removed _imp._clear_lazy_modules. Tests pass. Pushed commit 083bbe99cf6.\n- 2026-05-05: stripped internal sys._lazy_modules mention and incorrect set_lazy_imports cross-ref from sys.rst lazy_modules entry; pushed 46c6033a5eb"
+  "updated_at": "2026-06-01T23:35:16.971374Z",
+  "next_step": "open PR from gh-148587-doc-sys-lazy-modules against python/cpython main",
+  "progress": "- 2026-05-05: Re-exposed live lazy registry as sys._lazy_modules (undocumented); sys.lazy_modules remains frozendict snapshot. Removed _imp._clear_lazy_modules. Tests pass. Pushed commit 083bbe99cf6.\n- 2026-05-05: stripped internal sys._lazy_modules mention and incorrect set_lazy_imports cross-ref from sys.rst lazy_modules entry; pushed 46c6033a5eb\n- 2026-05-17: Fixed CI: METH_NOARGS always produces '($self, /)' via signature_from_flags(), so sys.__dir__ must not be in no_signature set; removed it from there in test_inspect.py\n- 2026-06-02: dropped stale 14-commit branch; new clean branch from main with only the sys.lazy_modules doc entry (set semantics, versionadded::next)"
 }

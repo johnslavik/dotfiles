@@ -1,0 +1,20 @@
+{
+  "name": "gh-141262-the-event-loop-warns-only-on-windows-3-14-if-it-is",
+  "description": "gh-141262: The event loop warns only on Windows 3.14+ if it isn't closed before garbage collection",
+  "tracker": "github",
+  "issue_id": "gh-141262",
+  "repo_path": "/Users/bartosz.slawecki/Python/cpython",
+  "branch": "gh-141262-the-event-loop-warns-only-on-windows-3-14-if-it-is",
+  "worktree_path": "/Users/bartosz.slawecki/Python/cpython-worktrees/gh-141262",
+  "pr_url": null,
+  "pr_number": null,
+  "pr_repo": null,
+  "created_at": "2026-05-24T00:27:38.679102Z",
+  "updated_at": "2026-05-24T00:29:18.491896Z",
+  "status": "active",
+  "notes": "",
+  "next_step": "run test_asyncio tests; open PR to python/cpython",
+  "progress": "- 2026-05-24: applied diff \u2014 warn_explicit fix in base_events.__del__, self-pipe reader moved to _run_forever_setup/cleanup, test mock updated; committed 8e2dcf86dd7",
+  "tried": [],
+  "blockers": null
+}

@@ -1,0 +1,17 @@
+{
+  "name": "gh-148191-f1-help-full",
+  "description": "#148191: F1 help mode in the REPL",
+  "repo_path": "/Users/bartosz.slawecki/Python/cpython",
+  "branch": "gh-148191-f1-help-full",
+  "worktree_path": "/Users/bartosz.slawecki/Python/cpython-worktrees/gh-148191-full",
+  "pr_url": null,
+  "pr_number": null,
+  "pr_repo": null,
+  "created_at": "2026-04-26T19:00:48.667899Z",
+  "updated_at": "2026-04-26T20:45:00.876778Z",
+  "status": "active",
+  "notes": "registered retroactively from existing worktree",
+  "next_step": "Commit the uncommitted help_mode.py module, commands.py/readline.py wiring, and 225-line test suite on the gh-148191-f1-help-full branch, then run the pyrepl tests and decide whether to push and open a PR for the full reader-mode F1 help variant.",
+  "archived_at": "2026-04-26T21:10:37.473998Z",
+  "archive_reason": "abandoned by user \u2014 F1 work not needed"
+}
