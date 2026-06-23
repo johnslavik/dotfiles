@@ -25,6 +25,9 @@ alias k3="kill %3 && printf '\033[H\033[J'"
 alias zq="zoxide query"
 alias tachyon="py -m profiling.sampling"
 
+alias pa='pi --no-skills --skill ~/skills/work --provider anthropic --model sonnet-4-6 --thinking high'
+alias po='pi --no-skills --skill ~/skills/public --provider openai-codex --model gpt-5.5 --thinking high'
+
 function feedparse() {
   uvx --with feedparser python -c 'import readline, sys, feedparser; print(feedparser.parse(sys.stdin.read())' | yq -P
 }
