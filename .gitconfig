@@ -7,6 +7,9 @@
     editor = hx
 	pager = delta
 
+[pager]
+	diff = delta --side-by-side
+
 [merge]
 	conflictstyle = zdiff3
 
