@@ -12,7 +12,9 @@ alias sv='pnpx sv'
 alias e='exa -F'
 alias r='cargo run --quiet --'
 alias autin='atuin'
-alias pre-commit='prek'
+# alias pre-commit='prek'
+alias opus='claude --model opus'
+alias fable='claude --model fable'
 
 # This tripped up AI way too often, I'm sick of it
 # alias cat='cat -v'
