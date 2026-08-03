@@ -13,7 +13,7 @@ alias e='exa -F'
 alias r='cargo run --quiet --'
 alias autin='atuin'
 # alias pre-commit='prek'
-alias opus='claude --model opus'
+alias opus='claude --model claude-opus-5[1m]'
 alias fable='claude --model fable'
 
 # This tripped up AI way too often, I'm sick of it
