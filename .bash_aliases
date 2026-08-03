@@ -84,7 +84,7 @@ function path-add() {
 
 function fork-sync() {
   local branch="${1:-main}"
-  git pull upstream "$branch" && git push origin "$branch"
+  git pull --rebase upstream "$branch" && git push origin "$branch"
 }
 
 function shell-restart() {
