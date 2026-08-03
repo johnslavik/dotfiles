@@ -16,3 +16,9 @@ auto-update = download
 auto-update-channel = tip
 macos-option-as-alt = true
 keybind = shift+enter=text:\x1b\r
+custom-shader = ~/.config/ghostty/shaders/cursor_blaze.glsl
+background-opacity = 0.90
+background-blur = true
+background-opacity-cells = true
+minimum-contrast = 1.5
+
