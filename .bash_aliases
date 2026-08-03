@@ -31,7 +31,7 @@ alias pa='pi --no-skills --skill ~/skills/work --provider anthropic --model sonn
 alias po='pi --no-skills --skill ~/skills/public --provider openai-codex --model gpt-5.5 --thinking high'
 
 function feedparse() {
-  uvx --with feedparser python -c 'import readline, sys, feedparser; print(feedparser.parse(sys.stdin.read())' | yq -P
+  uvx --with feedparser python -c 'import readline, sys, feedparser; print(feedparser.parse(sys.stdin.read()))' | yq -P
 }
 
 function cd() {
